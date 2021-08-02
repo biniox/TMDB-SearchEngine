@@ -1,4 +1,5 @@
 import MovieView from "./src/views/MovieView";
+import ObserveView from "./src/views/ObserveView";
 import SearchView from "./src/views/SearchView";
 
 const routes = [
@@ -9,6 +10,10 @@ const routes = [
     {
         name: "Movie",
         component: MovieView
+    },
+    {
+        name: "Observe",
+        component: ObserveView
     },
 ]
 
