@@ -12,11 +12,13 @@ const Header = (props) => {
 
 
     const handlerRightOnPress = () => navigator.navigate('Observe');
+    const handlerLeftOnPress = () => navigator.navigate('Search');
 
     return (
         <HeaderReactNativeElements
             centerComponent={{ text: 'Wyszukiwarka TMDB', style: styles.headerTitle  }}
             containerStyle={styles.header}
+            leftComponent={{ icon: 'home', type: 'font-awesome', onPress: handlerLeftOnPress, iconStyle: styles.headerLeft }}
             rightComponent={{ icon: 'heart', type: 'font-awesome', onPress: handlerRightOnPress, iconStyle: styles.headerRight }}
         />
     )
@@ -36,7 +38,14 @@ const styles = StyleSheet.create({
     headerRight: {
       color: COLORS.white,
       fontWeight: 'bold',
-      fontSize: 20,
+      fontSize: 30,
+      paddingRight: 10
+    },
+    headerLeft: {
+      color: COLORS.white,
+      fontWeight: 'bold',
+      fontSize: 30,
+      paddingLeft: 10
     }
   });
 
