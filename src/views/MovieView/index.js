@@ -21,9 +21,6 @@ const ObserveButton = ({ id, navigation }) => {
     setIsObserved(tmp);
   }
 
-  // useEffect(() => {
-  //   getObservedStatus();
-  // }, [id])
 
 
   useEffect(() => {

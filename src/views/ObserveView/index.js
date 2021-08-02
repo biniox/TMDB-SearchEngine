@@ -33,9 +33,14 @@ const ObserveView = ( { navigation } ) => {
     setIsLoading(false)
   }
 
-  useEffect( () => {
-    getObserveList()
-  }, [])
+
+  useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      getObserveList();
+    });
+
+    return unsubscribe;
+  }, [navigation]);
 
   return (
     <View style={styles.container}>
